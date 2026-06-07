@@ -8,12 +8,12 @@ s1=Core.System(duration,fps,lx,ly)
 g1=graph.Graph(lx,ly)
 
 
-s1.add_object(Objects.Object(2,7,2,8,15))
-s1.add_object(Objects.Object(5,5,4,4,80))
-s1.add_object(Objects.Object(3,6,5,10,0))
-s1.add_object(Objects.Object(3,9,20,2,180))
-s1.add_wall(Objects.Wall(9,10,4,4))
-s1.add_wall(Objects.Wall(13,5,8,1))
+s1.add_object(Objects.Object(6,7,5,18,15))
+s1.add_object(Objects.Object(7,5,12,14,80,0.8))
+s1.add_object(Objects.Object(10,6,10,15,0,0.7))
+s1.add_object(Objects.Object(3,9,20,10,180,1))
+s1.add_wall(Objects.Wall(9,15,4,9,0.7))
+s1.add_wall(Objects.Wall(13,12,8,8,1.2))
 for obj in s1.objects:
   g1.add_point(obj)
 for wall in s1.walls:
