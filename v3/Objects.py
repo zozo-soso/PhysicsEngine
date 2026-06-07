@@ -20,7 +20,7 @@ class Object():
 
 
 class Wall():
-    def __init__(self, x1, y1, x2, y2, pr=1):
+    def __init__(self, x1, y1, x2, y2, pr=1.5):
         from math import inf
         self.x1 = min(x1,x2)
         self.x2 = max(x1,x2)
