@@ -1,4 +1,4 @@
-from math import sin, cos
+from math import sin, cos, pi
 
 
 class Object():
@@ -6,6 +6,7 @@ class Object():
         self.px = px
         self.py = py
         self.m = m
+        angle=angle/180*pi
         self.vx = v * cos(angle)
         self.vy = v * sin(angle)
         self.pr = pr
@@ -20,11 +21,11 @@ class Object():
 
 
 class Wall():
-    def __init__(self, x1, y1, x2, y2, pr=1.5):
+    def __init__(self, x1, y1, x2, y2, pr=1.5,_type='default'):
         from math import inf
         self.x1 = min(x1,x2)
         self.x2 = max(x1,x2)
         self.y1 = min(y1,y2)
         self.y2 = max(y1,y2)
         self.pr = pr
-        self._type = "wall"
+        self._type = _type

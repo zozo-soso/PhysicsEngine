@@ -1,17 +1,19 @@
 import Core,Objects,graph
 import time
 
-lx,ly=10,15
-duration=20
+lx,ly=25,30
+duration=10
 fps=15
 s1=Core.System(duration,fps,lx,ly)
 g1=graph.Graph(lx,ly)
 
 
-s1.add_object(Objects.Object(6,7,5,18,15))
+s1.add_object(Objects.Object(6,7,5,18,90))
 s1.add_object(Objects.Object(7,5,12,14,80,0.8))
 s1.add_object(Objects.Object(10,6,10,15,0,0.7))
-s1.add_object(Objects.Object(3,9,20,10,180,1))
+s1.add_object(Objects.Object(4,9,20,10,45,1))
+s1.add_object(Objects.Object(2.5,ly-5,1,2,0,1))
+s1.add_wall(Objects.Wall(0,ly-10,lx,ly-10,1))
 s1.add_wall(Objects.Wall(9,15,4,9,0.7))
 s1.add_wall(Objects.Wall(13,12,8,8,1.2))
 for obj in s1.objects:

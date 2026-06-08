@@ -21,10 +21,10 @@ class System():
         self.lengthx = lengthx
         self.lengthy = lengthy
 
-        self.add_wall(Objects.Wall(0,0,0,lengthy))
-        self.add_wall(Objects.Wall(0,0,lengthx,0))
-        self.add_wall(Objects.Wall(0,lengthy,lengthx,lengthy))
-        self.add_wall(Objects.Wall(lengthx,0,lengthx,lengthy))
+        self.add_wall(Objects.Wall(0,0,0,lengthy,_type='border'))
+        self.add_wall(Objects.Wall(0,0,lengthx,0,_type='border'))
+        self.add_wall(Objects.Wall(0,lengthy,lengthx,lengthy,_type='border'))
+        self.add_wall(Objects.Wall(lengthx,0,lengthx,lengthy,_type='border'))
     def run(self):
         for i in range(len(self.objects)):
             for j in range(i+1,len(self.objects)):

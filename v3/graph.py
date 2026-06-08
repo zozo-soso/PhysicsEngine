@@ -12,7 +12,10 @@ class Graph():
     def add_point(self,obj):
         self.points[obj] = plt.Circle((obj.px,obj.py),obj.pr)
     def add_line(self,wall):
-        line, = self.ax.plot([wall.x1, wall.x2], [wall.y1, wall.y2],linewidth= wall.pr*22)
+        line, = self.ax.plot([wall.x1, wall.x2], [wall.y1, wall.y2],solid_capstyle='round',linewidth= wall.pr*20)
+        if wall._type=='border':
+            line.set_color('black')
+            #line.set_solid_capstyle('butt')
         self.lines[wall]=line
     def run(self):
         plt.ion()

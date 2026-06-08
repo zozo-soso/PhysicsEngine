@@ -3,7 +3,7 @@ v1:this physics engine simulates 1d environment that have several objects moving
 
 v2:same as last one but 2d
 
-v3:adding walls, more cusomizability and cleaner code
+v3:adding walls, fixing some bugs, more cusomizability and cleaner code
 
 
 before running any code
